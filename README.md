@@ -26,6 +26,9 @@
 
 	```
 	$ cd <your-catkin-workspace-path>
+	$ sudo apt-get install ros-kinetic-pcl-conversions
+	$ sudo apt-get install ros-kinetic-pcl-msgs
+	$ sudo apt-get install ros-kinetic-pcl-ros
 	$ rosinstall_generator pcl_conversions pcl_msgs pcl_ros ‐‐rosdistro KINETIC ‐‐deps ‐‐wet‐only ‐‐exclude roslisp ‐‐tar > ros_pcl.rosinstall
 	$ wstool init src ros_pcl.rosinstall
 	# This rosdep command installs all the missing system dependency
