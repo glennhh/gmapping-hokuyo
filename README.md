@@ -27,8 +27,9 @@
 	```
 	$ cd <your-catkin-workspace-path>
 	$ sudo apt-get install ros-kinetic-pcl-conversions
-	$ sudo apt-get install ros-kinetic-pcl-msgs
-	$ sudo apt-get install ros-kinetic-pcl-ros
+        $ sudo apt-get install ros-kinetic-pcl-msgs
+        $ sudo apt-get install ros-kinetic-pcl-ros
+
 	$ rosinstall_generator pcl_conversions pcl_msgs pcl_ros ‐‐rosdistro KINETIC ‐‐deps ‐‐wet‐only ‐‐exclude roslisp ‐‐tar > ros_pcl.rosinstall
 	$ wstool init src ros_pcl.rosinstall
 	# This rosdep command installs all the missing system dependency
@@ -37,6 +38,15 @@
 	# run this if missing path error reported: rosdep install --from-paths /home/.../catkin_ws/src --ignore-src --rosdistro=KINETIC
 	$ catkin_make
 	```
+Error list:
+   1. 
+perception_pcl/pcl_ros/CMakeFiles/pointcloud_to_pcd.dir/build.make:62: recipe for target 'perception_pcl/pcl_ros/CMakeFiles/pointcloud_to_pcd.dir/tools/pointcloud_to_pcd.cpp.o' failed
+make[2]: *** [perception_pcl/pcl_ros/CMakeFiles/pointcloud_to_pcd.dir/tools/pointcloud_to_pcd.cpp.o] Error 4
+CMakeFiles/Makefile2:4028: recipe for target 'perception_pcl/pcl_ros/CMakeFiles/pointcloud_to_pcd.dir/all' failed
+make[1]: *** [perception_pcl/pcl_ros/CMakeFiles/pointcloud_to_pcd.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+
+     A: catkin_make -j1 -l1
 
 - 安装csm
 
