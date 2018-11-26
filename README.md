@@ -29,7 +29,7 @@
 	$ sudo apt-get install ros-kinetic-pcl-conversions
         $ sudo apt-get install ros-kinetic-pcl-msgs
         $ sudo apt-get install ros-kinetic-pcl-ros
-
+        # de-comment #include in CMakelist of directory, in pcl_ros
 	$ rosinstall_generator pcl_conversions pcl_msgs pcl_ros ‐‐rosdistro KINETIC ‐‐deps ‐‐wet‐only ‐‐exclude roslisp ‐‐tar > ros_pcl.rosinstall
 	$ wstool init src ros_pcl.rosinstall
 	# This rosdep command installs all the missing system dependency
