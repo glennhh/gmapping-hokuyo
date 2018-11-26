@@ -26,11 +26,12 @@
 
 	```
 	$ cd <your-catkin-workspace-path>
-	$ rosinstall_generator pcl_conversions pcl_msgs pcl_ros ‐‐rosdistro <your-ros-version> ‐‐deps ‐‐wet‐only ‐‐exclude roslisp ‐‐tar > ros_pcl.rosinstall
+	$ rosinstall_generator pcl_conversions pcl_msgs pcl_ros ‐‐rosdistro KINETIC ‐‐deps ‐‐wet‐only ‐‐exclude roslisp ‐‐tar > ros_pcl.rosinstall
 	$ wstool init src ros_pcl.rosinstall
 	# This rosdep command installs all the missing system dependency
 	# (must be described in package.xml) in all the packages in your src directory.
-	$ rosdep install ‐‐from‐paths src ‐‐ignore‐src ‐‐rosdistro <your-ros-version> ‐y ‐r
+	$ rosdep install ‐‐from‐paths src ‐‐ignore‐src ‐‐rosdistro KINETIC ‐y ‐r
+	# run this if missing path error reported: rosdep install --from-paths /home/.../catkin_ws/src --ignore-src --rosdistro=KINETIC
 	$ catkin_make
 	```
 
